@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | env config added" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="5d4a5cf0-136d-4f1c-ac6b-0f5ced45689c" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2189aLbyMwkHuykBy5o3sKdwBzL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;14.17.6&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;14.17.6&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/phpstorm/272/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Node.js.index.js">
+    <configuration name="index.js" type="NodeJSConfigurationType" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
+      <envs>
+        <env name="GOOGLE_SCRIPT_URL" value="https://script.google.com/macros/s/AKfycbx5BoWAYbWArxk09sb0u1wRPrmiWCFllfm2vSqV81DHmIH3BHozjiizj2UXy82hmANpcQ/exec" />
+        <env name="PORT" value="3000" />
+        <env name="SLACK_BOT_TOKEN" value="xoxb-1608125564161-3606192082000-7uHBRS9F2sEDltVNEudoXGnz" />
+        <env name="SLACK_SIGNING_SECRET" value="37bb72117eafb8dedacd1771babcbd9b" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.index.js" />
+      <item itemvalue="npm.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="" />
+      <created>1637311910152</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637311910152</updated>
+      <workItem from="1637311911289" duration="1158000" />
+      <workItem from="1652685329174" duration="32000" />
+      <workItem from="1652788979237" duration="1423000" />
+      <workItem from="1652793707320" duration="8000" />
+      <workItem from="1653547211445" duration="11680000" />
+      <workItem from="1653635473682" duration="2982000" />
+      <workItem from="1653891093526" duration="15105000" />
+      <workItem from="1654237478348" duration="1132000" />
+      <workItem from="1654499199910" duration="12763000" />
+      <workItem from="1654764407171" duration="2088000" />
+      <workItem from="1654773321493" duration="1559000" />
+      <workItem from="1654775864548" duration="3267000" />
+      <workItem from="1655113236221" duration="602000" />
+      <workItem from="1655884261522" duration="5196000" />
+    </task>
+    <task id="LOCAL-00001" summary="* | env config added">
+      <created>1654500925446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654500925446</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="* | env config added" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | env config added" />
+  </component>
+</project>
