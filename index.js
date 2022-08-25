@@ -13,6 +13,12 @@ app.command('/duty', async ({command, ack, say}) => {
     try {
         const dutyName = googleDocService.getActualDutyName();
         const dutySlackId = googleDocService.getActualDutyId();
+        if (dutyName === '' || dutySlackId === '') {
+            await say ('Не удалось получить значение из таблицы с графиком дежурств')
+        }
+        if (typeof dutyName == "undefined") {
+            await say(`Просыпаюсь... Повторите попытку через несколько секунд`);
+        }
         await say(`Дежурит ${dutyName}. <@${dutySlackId}>, help!`);
     } catch (e) {
         console.error(e)
