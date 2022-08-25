@@ -14,12 +14,14 @@ app.command('/duty', async ({command, ack, say}) => {
         const dutyName = googleDocService.getActualDutyName();
         const dutySlackId = googleDocService.getActualDutyId();
         if (dutyName === '' || dutySlackId === '') {
-            await say ('Не удалось получить значение из таблицы с графиком дежурств')
+            await say('Не удалось получить значение из таблицы с графиком дежурств')
         }
-        if (typeof dutyName == "undefined") {
+        if (typeof dutyName === "undefined") {
             await say(`Просыпаюсь... Повторите попытку через несколько секунд`);
+        } else {
+            await cdsay(`Дежурит ${dutyName}. <@${dutySlackId}>, help!`);
         }
-        await say(`Дежурит ${dutyName}. <@${dutySlackId}>, help!`);
+
     } catch (e) {
         console.error(e)
     }
