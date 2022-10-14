@@ -52,7 +52,10 @@ class SlackService {
         const web = new WebClient(process.env.SLACK_BOT_TOKEN);
         try {
             let response = await web.conversations.history({channel: channelId});
+            console.log(response);
             let responseObj = Object.values(response.messages);
+            console.log(responseObj);
+
 
             let messages = [];
             responseObj.forEach(element => messages.push(element.text));
