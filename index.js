@@ -6,8 +6,7 @@ require('dotenv').config();
 const io = require('@pm2/io');
 
 io.init({
-    transactions: true,
-    http: true
+    transactions: true
 });
 
 const app = new App({
