@@ -58,5 +58,7 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({context, say}) => {
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡');
     await googleDocService.start();
+    console.log(process.env.SLACK_BOT_TOKEN);
+    console.log(process.env.SLACK_SIGNING_SECRET);
     await app.start(process.env.PORT || 3000);
 })();
