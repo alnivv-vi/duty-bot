@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@pm2/io": "^5.0.0",
     "@slack/bolt": "^3.11.1",
     "@slack/oauth": "^2.5.2",
     "@slack/web-api": "^6.7.2",
