@@ -3,6 +3,12 @@ const slackService = require('./slack-service');
 const reportProdChannelId = 'C043XFA6C77';
 const {App} = require('@slack/bolt');
 require('dotenv').config();
+const io = require('@pm2/io');
+
+io.init({
+    transactions: true,
+    http: true
+});
 
 const app = new App({
     token: process.env.SLACK_BOT_TOKEN,
