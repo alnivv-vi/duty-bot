@@ -1,13 +1,8 @@
 const googleDocService = require('./google-doc.js');
 const slackService = require('./slack-service');
-const reportProdChannelId = 'C043XFA6C77';
+const reportProdChannelId = 'C01H2M7TS3H';
 const {App} = require('@slack/bolt');
 require('dotenv').config();
-const io = require('@pm2/io');
-
-io.init({
-    transactions: true
-});
 
 const app = new App({
     token: process.env.SLACK_BOT_TOKEN,
@@ -63,7 +58,5 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({context, say}) => {
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡');
     await googleDocService.start();
-    console.log(process.env.SLACK_BOT_TOKEN);
-    console.log(process.env.SLACK_SIGNING_SECRET);
     await app.start(process.env.PORT || 3000);
 })();
