@@ -1,6 +1,6 @@
 const googleDocService = require('./google-doc.js');
 const slackService = require('./slack-service');
-const reportProdChannelId = 'C01H2M7TS3H';
+const reportProdChannelId = 'C043XFA6C77';
 const {App} = require('@slack/bolt');
 require('dotenv').config();
 
