@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | debug">
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | поправил reportProdChannelId">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
@@ -108,6 +108,9 @@
       <workItem from="1665563836436" duration="12502000" />
       <workItem from="1665643077389" duration="1962000" />
       <workItem from="1665727238146" duration="16221000" />
+      <workItem from="1666698807188" duration="3127000" />
+      <workItem from="1667197854438" duration="9159000" />
+      <workItem from="1667287980348" duration="8056000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -165,7 +168,35 @@
       <option name="project" value="LOCAL" />
       <updated>1665742176993</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="* | debug">
+      <created>1666703119338</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666703119338</updated>
+    </task>
+    <task id="LOCAL-00010" summary="* | debug">
+      <created>1666703803325</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1666703803325</updated>
+    </task>
+    <task id="LOCAL-00011" summary="* | debug">
+      <created>1666703892549</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666703892549</updated>
+    </task>
+    <task id="LOCAL-00012" summary="* | поправил reportProdChannelId">
+      <created>1667200575850</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667200575850</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +219,8 @@
     <MESSAGE value="* | отладка" />
     <MESSAGE value="* | new feat. test results diff" />
     <MESSAGE value="* | debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | debug" />
+    <MESSAGE value="* | поправил reportProdChannelId" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | поправил reportProdChannelId" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

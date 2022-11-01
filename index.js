@@ -1,6 +1,5 @@
 const googleDocService = require('./google-doc.js');
 const slackService = require('./slack-service');
-const reportProdChannelId = 'C043XFA6C77';
 const {App} = require('@slack/bolt');
 require('dotenv').config();
 
@@ -31,8 +30,9 @@ app.command('/duty', async ({command, ack, say}) => {
 
 });
 
-app.message(/(\/failedRerunTests\.txt).*/, async ({context, say}) => {
-    if (context.matches.input) {
+app.message(/(\/failedRerunTests\.txt).*/, async ({ context,message, say }) => {
+    const reportProdChannelId = process.env.REPORT_PROD_CHANNEL_ID;
+    if (context.matches.input && message.channel === reportProdChannelId) {
         let diff = await slackService.getData(reportProdChannelId);
         console.log(diff)
         await slackService.sendReply(reportProdChannelId, `Сравнил с предыдущим тегом. Новые упавшие тесты:\n :point_down:`);
@@ -58,5 +58,5 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({context, say}) => {
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡');
     await googleDocService.start();
-    await app.start(process.env.PORT || 3000);
+    await app.start(process.env.PORT || 3003);
 })();
