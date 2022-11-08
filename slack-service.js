@@ -1,25 +1,37 @@
 const {WebClient} = require('@slack/web-api');
-const fetch = require('node-fetch');
 
 class SlackService {
-    async getData(channelId) {
-        let messages = await this._getMessagesFromChannel(channelId);
-        let filtered = await this._filterByGroup(messages);
-        let compare = await this._getMessagesToCompare(filtered);
+    /**
+     * Получение объекта с данными по разнице прогонов.
+     * Последний отчёт в канале сравнивается с предыдущим отчётом (с предыдущим тегом) по аналогичной группе тестов.
+     *
+     * Свойства возвращаемого объекта:
+     * - diffCount - Количество новых упавших тестов,
+     * - chunkCount - Количество частей (чанков), на которые нужно разбить сообщение,
+     * чтобы обойти ограничение слака по количеству символов в одном сообщении.
+     * - message - текст с сообщением, где отображаются уникальные упавшие тесты
+     * @param {string} channelId - id канала, в котором получаем отчёты с упавшими тестами
+     */
+    async getDiff(channelId) {
+        let compare = await this._getDataForCompare(channelId);
         let lastFailedTests = await this._getFailedTests(compare.lastTagName)
-        let previousFailedTests = await this._getFailedTests(compare.previousTagName)
-        let diff = await lastFailedTests.filter(x => !previousFailedTests.includes(x));
+        let previousFailedTests = await this._getFailedTests(compare.previousTagName);
+        let diffRaw = lastFailedTests.filter(x => !previousFailedTests.includes(x));
+        // Удаление побочного элемента - ссылки на отчёт
+        let diff = diffRaw.slice(0, -1);
         let diffCount = diff.length;
-        console.log(diffCount);
         let chunkCount = Math.floor(diffCount / 20);
         let chunkSize = Math.floor(diffCount / chunkCount);
-        console.log(chunkCount);
-        let result = await this.sliceIntoChunks(diff, chunkSize);
-        console.log(result)
+        let result = await this._sliceIntoChunks(diff, chunkSize);
         return {diffCount: diffCount, chunkCount: chunkCount, message: result};
     }
 
-    async sendReply(channelId, text) {
+    /**
+     * Отправка ответа в тред к последнему сообщению
+     * @param {string} channelId - id канала, в котором находится нужное сообщение
+     * @param {string} text - текст ответа
+     */
+    async sendReplyToLastMsg(channelId, text) {
         const web = new WebClient(process.env.SLACK_BOT_TOKEN);
         let response = await web.conversations.history({channel: channelId});
         let responseObj = Object.values(response.messages);
@@ -28,41 +40,42 @@ class SlackService {
         await web.chat.postMessage({channel: channelId, text: text, thread_ts: timeStamp})
     }
 
-    async _getFailedTests(tagName) {
-        let raw = await this._getContent(tagName);
+    async _getDataForCompare(channelId) {
+        let reports = await this._getReports(channelId);
+        let filtered = await this._filterByGroup(reports);
+        return await this._getMessagesToCompare(filtered)
+    }
+
+    async _getFailedTests(reportUrl) {
+        const dataChannelId = process.env.FAILED_ANALYTICS_CHANNEL;
+        const web = new WebClient(process.env.SLACK_BOT_TOKEN);
+        let response = await web.conversations.history({channel: dataChannelId});
+        let responseObj = Object.values(response.messages);
+        let raw = await this._filterByUrl(responseObj, reportUrl);
         return raw.split('\n');
     };
 
-    async _getContent(url, callback) {
-        let res = await fetch(url),
-            ret = await res.text();
-        return callback ? callback(ret) : ret;
+    async _filterByUrl(responseObj, url) {
+        try {
+            let messages = [];
+            responseObj.forEach(element => messages.push(element.text));
+            return messages.find(el => el.includes(url));
+
+        } catch (error) {
+            console.log('Ошибка при поиске сообщения в канале #site-autotest-failed-analytics');
+        }
     };
 
-    async sliceIntoChunks(arr, chunkSize) {
-        const res = [];
-        for (let i = 0; i < arr.length; i += chunkSize) {
-            const chunk = arr.slice(i, i + chunkSize);
-            res.push(chunk);
-        }
-        return res;
-    }
-
-    async _getMessagesFromChannel(channelId) {
-        const web = new WebClient(process.env.SLACK_BOT_TOKEN);
+    async _getReports(channelId) {
         try {
+            const web = new WebClient(process.env.SLACK_BOT_TOKEN);
             let response = await web.conversations.history({channel: channelId});
-            console.log(response);
             let responseObj = Object.values(response.messages);
-            console.log(responseObj);
-
-
             let messages = [];
             responseObj.forEach(element => messages.push(element.text));
             return messages.filter(value => /(\/failedRerunTests\.txt).*/.test(value))
-
         } catch (error) {
-            console.log('Ошибка при получении сообщений в канале');
+            console.log('Ошибка при получении сообщений с отчётами в канале #site-autotest-report-prod');
         }
     };
 
@@ -102,6 +115,14 @@ class SlackService {
         }
     };
 
+    async _sliceIntoChunks(arr, chunkSize) {
+        const res = [];
+        for (let i = 0; i < arr.length; i += chunkSize) {
+            const chunk = arr.slice(i, i + chunkSize);
+            res.push(chunk);
+        }
+        return res;
+    }
 }
 
 module.exports = (function () {
