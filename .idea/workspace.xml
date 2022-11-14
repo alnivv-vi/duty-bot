@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | поправил reportProdChannelId">
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | refactoring">
+      <change afterPath="$PROJECT_DIR$/localTunnel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slack-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/slack-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +121,11 @@
       <workItem from="1667287980348" duration="8056000" />
       <workItem from="1667803012545" duration="10614000" />
       <workItem from="1667887579834" duration="6500000" />
-      <workItem from="1667927666455" duration="5487000" />
+      <workItem from="1667927666455" duration="6302000" />
+      <workItem from="1667973809967" duration="1921000" />
+      <workItem from="1668073122085" duration="673000" />
+      <workItem from="1668100459567" duration="599000" />
+      <workItem from="1668447630407" duration="616000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -206,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667200575850</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="* | refactoring">
+      <created>1667934133636</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667934133636</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +242,8 @@
     <MESSAGE value="* | new feat. test results diff" />
     <MESSAGE value="* | debug" />
     <MESSAGE value="* | поправил reportProdChannelId" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | поправил reportProdChannelId" />
+    <MESSAGE value="* | refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
