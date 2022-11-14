@@ -1,5 +1,6 @@
 const googleDocService = require('./google-doc.js');
 const slackService = require('./slack-service');
+const localTunnel = require('localtunnel');
 const {App} = require('@slack/bolt');
 require('dotenv').config();
 
@@ -57,5 +58,8 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({ context,message, say }) => {
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡');
     await googleDocService.start();
+    await localTunnel(process.env.PORT || 3000, { subdomain: "" }, function(err, tunnel) {
+            console.log('localTunnel running')
+        });
     await app.start(process.env.PORT || 3000);
 })();
