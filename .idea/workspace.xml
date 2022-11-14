@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | localTunnel fix">
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localTunnel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.localTunnel.js">
+  <component name="RunManager" selected="npm.start">
     <configuration name="index.js" type="NodeJSConfigurationType" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
       <envs>
         <env name="GOOGLE_SCRIPT_URL" value="https://script.google.com/macros/s/AKfycbx5BoWAYbWArxk09sb0u1wRPrmiWCFllfm2vSqV81DHmIH3BHozjiizj2UXy82hmANpcQ/exec" />
@@ -64,6 +62,16 @@
       <method v="2" />
     </configuration>
     <configuration name="localTunnel.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/localTunnel.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -79,10 +87,12 @@
     <list>
       <item itemvalue="Node.js.index.js" />
       <item itemvalue="Node.js.localTunnel.js" />
+      <item itemvalue="npm.start" />
       <item itemvalue="npm.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="Node.js.localTunnel.js" />
         <item itemvalue="npm.test" />
       </list>
@@ -129,7 +139,7 @@
       <workItem from="1667973809967" duration="1921000" />
       <workItem from="1668073122085" duration="673000" />
       <workItem from="1668100459567" duration="599000" />
-      <workItem from="1668447630407" duration="2106000" />
+      <workItem from="1668447630407" duration="3256000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -243,7 +253,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668448966478</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="* | localTunnel fix">
+      <created>1668450209173</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1668450209173</updated>
+    </task>
+    <task id="LOCAL-00018" summary="* | localTunnel fix">
+      <created>1668450421608</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1668450421608</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
