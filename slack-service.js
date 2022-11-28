@@ -14,11 +14,9 @@ class SlackService {
      */
     async getDiff(channelId) {
         let compare = await this._getDataForCompare(channelId);
-        let lastFailedTests = await this._getFailedTests(compare.lastTagName)
+        let lastFailedTests = await this._getFailedTests(compare.lastTagName);
         let previousFailedTests = await this._getFailedTests(compare.previousTagName);
-        let diffRaw = lastFailedTests.filter(x => !previousFailedTests.includes(x));
-        // Удаление побочного элемента - ссылки на отчёт
-        let diff = diffRaw.slice(0, -1);
+        let diff = lastFailedTests.filter(x => !previousFailedTests.includes(x));
         let diffCount = diff.length;
         let chunkCount = Math.floor(diffCount / 20);
         let chunkSize = Math.floor(diffCount / chunkCount);
@@ -52,15 +50,35 @@ class SlackService {
         let response = await web.conversations.history({channel: dataChannelId});
         let responseObj = Object.values(response.messages);
         let raw = await this._filterByUrl(responseObj, reportUrl);
-        return raw.split('\n');
+        let rawWithoutUrl = raw.replace(/<http:\S+failedRerunTests\.txt>/, '');
+        return rawWithoutUrl.split('\n');
     };
 
     async _filterByUrl(responseObj, url) {
         try {
             let messages = [];
-            responseObj.forEach(element => messages.push(element.text));
-            return messages.find(el => el.includes(url));
 
+            responseObj.forEach(element => messages.push(element.text));
+            let message = messages.find(el => el.includes(url));
+            let index = messages.findIndex(el => el.includes(url));
+
+            // Проверяем предыдущие сообщения.
+            // Если перед сообщением со ссылкой на отчёт есть сообщение без ссылки, значит slack сплитил сообщение, и нужно его соединить
+            let previousMessages = messages.slice(index + 1);
+            let fullMessage = message;
+            previousMessages.every(function (value, i) {
+                let indexWithUrl = previousMessages.findIndex(el => el.includes('failedRerunTests.txt'));
+                if (indexWithUrl === 0) {
+                    return false
+                } else {
+                    let message = previousMessages[i];
+                    fullMessage += message;
+                    previousMessages = previousMessages.slice(1);
+                    return true;
+                }
+
+            });
+            return fullMessage;
         } catch (error) {
             console.log('Ошибка при поиске сообщения в канале #site-autotest-failed-analytics');
         }
