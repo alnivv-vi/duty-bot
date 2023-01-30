@@ -58,8 +58,6 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({ context,message, say }) => {
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡');
     await googleDocService.start();
-    await localTunnel(process.env.PORT || 3000, { subdomain: "vi-duty-bot5" }, function(err, tunnel) {
-            console.log('localTunnel running on 3000')
-        });
     await app.start(process.env.PORT || 3000);
+    console.log('⚡️duty-bot запущен⚡');
 })();
