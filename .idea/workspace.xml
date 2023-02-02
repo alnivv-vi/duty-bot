@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | localTunnel fix" />
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | new version info">
+      <change afterPath="$PROJECT_DIR$/flaky.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slack-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/slack-service.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,8 +49,12 @@
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;14.17.6&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;14.17.6&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/alnivv/TestAutomation/duty-bot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/snap/phpstorm/295/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/phpstorm/312/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -141,6 +155,13 @@
       <workItem from="1668492804477" duration="1952000" />
       <workItem from="1668504644453" duration="607000" />
       <workItem from="1668668943707" duration="959000" />
+      <workItem from="1669701960335" duration="2619000" />
+      <workItem from="1675068674468" duration="7000000" />
+      <workItem from="1675153097913" duration="5657000" />
+      <workItem from="1675235732756" duration="6990000" />
+      <workItem from="1675258051762" duration="1651000" />
+      <workItem from="1675318453432" duration="5474000" />
+      <workItem from="1675330637945" duration="10947000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -282,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668669664887</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="* | new version info">
+      <created>1669703218026</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669703218026</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +337,8 @@
     <MESSAGE value="* | refactoring" />
     <MESSAGE value="* | localTunnel added" />
     <MESSAGE value="* | localTunnel fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | localTunnel fix" />
+    <MESSAGE value="* | new version info" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | new version info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
