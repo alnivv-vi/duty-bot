@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | new version info">
-      <change afterPath="$PROJECT_DIR$/flaky.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slack-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/slack-service.js" afterDir="false" />
-    </list>
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | flaky feature" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,7 +154,7 @@
       <workItem from="1675235732756" duration="6990000" />
       <workItem from="1675258051762" duration="1651000" />
       <workItem from="1675318453432" duration="5474000" />
-      <workItem from="1675330637945" duration="10947000" />
+      <workItem from="1675330637945" duration="11351000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -310,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669703218026</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="* | flaky feature">
+      <created>1675348117868</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1675348117868</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +338,8 @@
     <MESSAGE value="* | localTunnel added" />
     <MESSAGE value="* | localTunnel fix" />
     <MESSAGE value="* | new version info" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | new version info" />
+    <MESSAGE value="* | flaky feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | flaky feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

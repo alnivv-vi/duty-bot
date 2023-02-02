@@ -61,7 +61,7 @@ class Flaky {
         let data = await slackService._sliceIntoChunks(result, chunkSize);
         this._flakyData = {itemsCount: itemsCount, chunkCount: chunkCount, message: data};
         let end = Date.now();
-        console.log(`Скрипт отработал за ${end - start} миллисекунд`);
+        console.log(`Скрипт flaky отработал за ${end - start} миллисекунд`);
     }
 }
 

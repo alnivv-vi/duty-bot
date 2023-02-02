@@ -66,7 +66,7 @@ app.command('/flaky', async ({command, ack, say}) => {
     try {
         const flakyData = flakyService.getFlakyData();
         if (flakyData === '' || typeof flakyData === "undefined") {
-            await say('*Не удалось получить данные flaky-тестов. Нужно подождать до 5 минут. Если не помогает, то перезапустить duty-bot*');
+            await say('*Не удалось получить данные flaky-тестов. Подождите или попросите перезапустить duty-bot*');
         } else {
             let testWord = slackService.declination(flakyData.itemsCount);
             await say(`*На данный момент есть ${flakyData.itemsCount} ${testWord} с рейтингом прохождения < ${flakyService.getComparisonRate()}%*\n :point_down:`);
