@@ -45,7 +45,7 @@ class Flaky {
                 if (!data.extra.history || data.status === "skipped") continue;
                 let statistic = data.extra.history.statistic;
                 let successRate = statistic.passed / statistic.total * 100;
-                let roundSuccessRate = Math.round(successRate * 100) / 100
+                let roundSuccessRate = Math.round(successRate)
                 if (roundSuccessRate > rateValue) continue;
                 let name = data.name;
                 let testCaseSuccess = `${name}: ${roundSuccessRate}%`;
