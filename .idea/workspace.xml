@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | rateValue">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaky.js" beforeDir="false" afterPath="$PROJECT_DIR$/flaky.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | сортировка по rateValue" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +155,7 @@
       <workItem from="1675258051762" duration="1651000" />
       <workItem from="1675318453432" duration="5474000" />
       <workItem from="1675330637945" duration="11351000" />
-      <workItem from="1675404952284" duration="4091000" />
+      <workItem from="1675404952284" duration="4580000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -322,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675407512596</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="* | сортировка по rateValue">
+      <created>1675412923280</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1675412923281</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +355,8 @@
     <MESSAGE value="* | new version info" />
     <MESSAGE value="* | flaky feature" />
     <MESSAGE value="* | rateValue" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | rateValue" />
+    <MESSAGE value="* | сортировка по rateValue" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | сортировка по rateValue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

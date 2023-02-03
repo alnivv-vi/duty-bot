@@ -1,7 +1,7 @@
 const slackService = require('./slack-service');
 const axios = require('axios');
 const HTMLParser = require('node-html-parser');
-const rateValue = 60;
+const rateValue = 90;
 
 class Flaky {
 
@@ -38,7 +38,7 @@ class Flaky {
     async _getSuccessRate(testCases, rateValue) {
         const result = [];
         let start = Date.now();
-        for (let i = 0; i < testCases.length; i++) {
+        for (let i = 0; i < 100; i++) {
             try {
                 let res = await axios.get(testCases[i], {timeout:10000});
                 let data = res.data;
@@ -55,7 +55,10 @@ class Flaky {
                 console.log('Ошибка при получении данных с сервера allure');
             }
         }
-        result.sort(this.customSort)
+        console.log(result);
+        result.sort(this.customSort);
+        console.log(result)
+
         let itemsCount = result.length;
         let chunkCount = Math.floor(itemsCount / 50);
         let chunkSize = Math.floor(itemsCount / chunkCount);
@@ -63,6 +66,7 @@ class Flaky {
         this._flakyData = {itemsCount: itemsCount, chunkCount: chunkCount, message: data};
         let end = Date.now();
         console.log(`Скрипт flaky отработал за ${end - start} миллисекунд`);
+        console.log(this._flakyData);
     }
 
     customSort = function (a, b) {
