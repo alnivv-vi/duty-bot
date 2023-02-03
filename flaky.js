@@ -1,7 +1,7 @@
 const slackService = require('./slack-service');
 const axios = require('axios');
 const HTMLParser = require('node-html-parser');
-const rateValue = 95;
+const rateValue = 60;
 
 class Flaky {
 
