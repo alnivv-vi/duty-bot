@@ -45,7 +45,7 @@ class Flaky {
                 if (!data.extra.history || data.status === "skipped") continue;
                 let statistic = data.extra.history.statistic;
                 let successRate = statistic.passed / statistic.total * 100;
-                let roundSuccessRate = Math.round(successRate)
+                let roundSuccessRate = Math.round(successRate * 100) / 100
                 if (roundSuccessRate > rateValue) continue;
                 let name = data.name;
                 let testCaseSuccess = `${name}: ${roundSuccessRate}%`;
@@ -55,10 +55,6 @@ class Flaky {
                 console.log('Ошибка при получении данных с сервера allure');
             }
         }
-        console.log(result);
-        // result.sort(this.customSort);
-        // console.log(result)
-
         let itemsCount = result.length;
         let chunkCount = Math.floor(itemsCount / 50);
         let chunkSize = Math.floor(itemsCount / chunkCount);
@@ -66,11 +62,6 @@ class Flaky {
         this._flakyData = {itemsCount: itemsCount, chunkCount: chunkCount, message: data};
         let end = Date.now();
         console.log(`Скрипт flaky отработал за ${end - start} миллисекунд`);
-        console.log(this._flakyData);
-    }
-
-    customSort = function (a, b) {
-        return (Number(a.match(/(\d+)/g)[0]) - Number((b.match(/(\d+)/g)[0])));
     }
 }
 
