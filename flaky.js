@@ -63,6 +63,7 @@ class Flaky {
         this._flakyData = {itemsCount: itemsCount, chunkCount: chunkCount, message: data};
         let end = Date.now();
         console.log(`Скрипт flaky отработал за ${end - start} миллисекунд`);
+        console.log(this._flakyData);
     }
 
     customSort = function (a, b) {

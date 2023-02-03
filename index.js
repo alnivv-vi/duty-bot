@@ -64,6 +64,7 @@ app.command('/flaky', async ({command, ack, say}) => {
     await ack();
 
     try {
+        await flakyService.start();
         const flakyData = flakyService.getFlakyData();
         if (flakyData === '' || typeof flakyData === "undefined") {
             await say('*Не удалось получить данные flaky-тестов. Подождите или попросите перезапустить duty-bot*');
@@ -91,9 +92,4 @@ app.command('/flaky', async ({command, ack, say}) => {
             console.log('localTunnel running')
         });
     await app.start(process.env.PORT || 3000);
-    try {
-        await flakyService.start();
-    } catch (e) {
-        console.error(e)
-    }
 })();
