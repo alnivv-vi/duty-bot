@@ -56,8 +56,8 @@ class Flaky {
             }
         }
         console.log(result);
-        result.sort(this.customSort);
-        console.log(result)
+        // result.sort(this.customSort);
+        // console.log(result)
 
         let itemsCount = result.length;
         let chunkCount = Math.floor(itemsCount / 50);
