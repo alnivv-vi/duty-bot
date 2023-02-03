@@ -38,7 +38,7 @@ class Flaky {
     async _getSuccessRate(testCases, rateValue) {
         const result = [];
         let start = Date.now();
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < testCases.length; i++) {
             try {
                 let res = await axios.get(testCases[i], {timeout:10000});
                 let data = res.data;
