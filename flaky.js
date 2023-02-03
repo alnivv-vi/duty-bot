@@ -55,6 +55,7 @@ class Flaky {
                 console.log('Ошибка при получении данных с сервера allure');
             }
         }
+        result.sort(this.customSort)
         let itemsCount = result.length;
         let chunkCount = Math.floor(itemsCount / 50);
         let chunkSize = Math.floor(itemsCount / chunkCount);
@@ -62,6 +63,10 @@ class Flaky {
         this._flakyData = {itemsCount: itemsCount, chunkCount: chunkCount, message: data};
         let end = Date.now();
         console.log(`Скрипт flaky отработал за ${end - start} миллисекунд`);
+    }
+
+    customSort = function (a, b) {
+        return (Number(a.match(/(\d+)/g)[0]) - Number((b.match(/(\d+)/g)[0])));
     }
 }
 
