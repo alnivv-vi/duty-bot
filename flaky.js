@@ -1,21 +1,16 @@
 const slackService = require('./slack-service');
 const axios = require('axios');
 const HTMLParser = require('node-html-parser');
-const rateValue = 60;
 
 class Flaky {
 
-    async start() {
+    async start(rateValue) {
         let testCases = await this._getTestCasesUrls();
         await this._getSuccessRate(testCases, rateValue);
     }
 
     getFlakyData() {
         return this._flakyData;
-    }
-
-    getComparisonRate() {
-        return rateValue;
     }
 
     async _fetchTestCases() {
@@ -38,7 +33,7 @@ class Flaky {
     async _getSuccessRate(testCases, rateValue) {
         const result = [];
         let start = Date.now();
-        for (let i = 0; i < testCases.length; i++) {
+        for (let i = 0; i < 100; i++) {
             try {
                 let res = await axios.get(testCases[i], {timeout:10000});
                 let data = res.data;

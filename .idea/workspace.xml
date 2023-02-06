@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | сортировка по рейтингу">
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | перенёс старт флаки-сервиса в команду">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaky.js" beforeDir="false" afterPath="$PROJECT_DIR$/flaky.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +159,9 @@
       <workItem from="1675258051762" duration="1651000" />
       <workItem from="1675318453432" duration="5474000" />
       <workItem from="1675330637945" duration="11351000" />
-      <workItem from="1675404952284" duration="7093000" />
+      <workItem from="1675404952284" duration="18999000" />
+      <workItem from="1675444205853" duration="4268000" />
+      <workItem from="1675663862186" duration="675000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -376,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675415094758</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="* | перенёс старт флаки-сервиса в команду">
+      <created>1675417509386</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1675417509386</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +420,8 @@
     <MESSAGE value="* | сортировка по rateValue" />
     <MESSAGE value="* | сортировка debug" />
     <MESSAGE value="* | сортировка по рейтингу" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | сортировка по рейтингу" />
+    <MESSAGE value="* | перенёс старт флаки-сервиса в команду" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | перенёс старт флаки-сервиса в команду" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
