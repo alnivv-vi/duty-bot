@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | перенёс старт флаки-сервиса в команду">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaky.js" beforeDir="false" afterPath="$PROJECT_DIR$/flaky.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | flaky fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -387,7 +383,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675417509386</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="* | flaky modal added">
+      <created>1675678225029</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1675678225029</updated>
+    </task>
+    <task id="LOCAL-00034" summary="* | flaky fix">
+      <created>1675678967065</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1675678967065</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +431,9 @@
     <MESSAGE value="* | сортировка debug" />
     <MESSAGE value="* | сортировка по рейтингу" />
     <MESSAGE value="* | перенёс старт флаки-сервиса в команду" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | перенёс старт флаки-сервиса в команду" />
+    <MESSAGE value="* | flaky modal added" />
+    <MESSAGE value="* | flaky fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | flaky fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
