@@ -48,14 +48,14 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({context, message, say}) => {
 
         let testWord = slackService.declination(diff.diffCount);
         if (diff.diffCount <= 5) {
-            await slackService.sendReplyToLastMsg(reportProdChannelId, `Упало ${diff.diffCount} ${testWord} :pinching_hand:`);
+            await slackService.sendReplyToLastMsg(reportProdChannelId, `${diff.diffCount} ${testWord} :pinching_hand:`);
         }
         if (diff.diffCount > 5 && diff.diffCount <= 30) {
-            await slackService.sendReplyToLastMsg(reportProdChannelId, `Упало ${diff.diffCount} ${testWord} :expressionless:`);
+            await slackService.sendReplyToLastMsg(reportProdChannelId, `${diff.diffCount} ${testWord} :expressionless:`);
         } else if (diff.diffCount > 30 && diff.diffCount <= 60) {
-            await slackService.sendReplyToLastMsg(reportProdChannelId, `Упало ${diff.diffCount} ${testWord} :face_with_spiral_eyes:`);
+            await slackService.sendReplyToLastMsg(reportProdChannelId, `${diff.diffCount} ${testWord} :face_with_spiral_eyes:`);
         } else if (diff.diffCount > 60) {
-            await slackService.sendReplyToLastMsg(reportProdChannelId, `Упало ${diff.diffCount} ${testWord} :skull_and_crossbones:`);
+            await slackService.sendReplyToLastMsg(reportProdChannelId, `${diff.diffCount} ${testWord} :skull_and_crossbones:`);
         }
     }
 });
