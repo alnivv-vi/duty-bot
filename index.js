@@ -45,18 +45,6 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({context, message, say}) => {
                 await slackService.sendReplyToLastMsg(reportProdChannelId, `\`\`\`${message}\`\`\``);
             }
         }
-
-        let testWord = slackService.declination(diff.diffCount);
-        if (diff.diffCount <= 5) {
-            await slackService.sendReplyToLastMsg(reportProdChannelId, `${diff.diffCount} ${testWord} :pinching_hand:`);
-        }
-        if (diff.diffCount > 5 && diff.diffCount <= 30) {
-            await slackService.sendReplyToLastMsg(reportProdChannelId, `${diff.diffCount} ${testWord} :expressionless:`);
-        } else if (diff.diffCount > 30 && diff.diffCount <= 60) {
-            await slackService.sendReplyToLastMsg(reportProdChannelId, `${diff.diffCount} ${testWord} :face_with_spiral_eyes:`);
-        } else if (diff.diffCount > 60) {
-            await slackService.sendReplyToLastMsg(reportProdChannelId, `${diff.diffCount} ${testWord} :skull_and_crossbones:`);
-        }
     }
 });
 
