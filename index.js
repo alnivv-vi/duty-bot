@@ -36,7 +36,10 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({context, message, say}) => {
     const reportProdChannelId = process.env.REPORT_PROD_CHANNEL_ID;
     if (context.matches.input && message.channel === reportProdChannelId) {
         let diff = await slackService.getDiff(reportProdChannelId);
-        await slackService.sendReplyToLastMsg(reportProdChannelId, `Сравнил с предыдущим тегом. Новые упавшие тесты:\n :point_down:`);
+        if (diff.diffCount === 0) {
+            await slackService.sendReplyToLastMsg(reportProdChannelId, `Сравнил этот тег с предыдущим *${diff.previousTagName}*. Новых упаших тестов не появилось :clap:`);
+        }
+        else await slackService.sendReplyToLastMsg(reportProdChannelId, `Сравнил этот тег с предыдущим *${diff.previousTagName}*. Новые упавшие тесты:\n :point_down:`);
         // В зависимости от размера отправляемого сообщения (т.е. от количества новых упавших тестов) оно может быть разбито на части
         let chunkCount = diff.chunkCount;
         for (let i = 0; i <= chunkCount; i++) {

@@ -14,14 +14,14 @@ class SlackService {
      */
     async getDiff(channelId) {
         let compare = await this._getDataForCompare(channelId);
-        let lastFailedTests = await this._getFailedTests(compare.lastTagName);
-        let previousFailedTests = await this._getFailedTests(compare.previousTagName);
+        let lastFailedTests = await this._getFailedTests(compare.lastFailedTestsUrl);
+        let previousFailedTests = await this._getFailedTests(compare.previousFailedTestsUrl);
         let diff = lastFailedTests.filter(x => !previousFailedTests.includes(x));
         let diffCount = diff.length;
         let chunkCount = Math.floor(diffCount / 20);
         let chunkSize = Math.floor(diffCount / chunkCount);
         let result = await this._sliceIntoChunks(diff, chunkSize);
-        return {diffCount: diffCount, chunkCount: chunkCount, message: result};
+        return {diffCount: diffCount, chunkCount: chunkCount, message: result, previousTagName:compare.previousTagName};
     }
 
     /**
@@ -45,13 +45,17 @@ class SlackService {
     }
 
     async _getFailedTests(reportUrl) {
-        const dataChannelId = process.env.FAILED_ANALYTICS_CHANNEL;
-        const web = new WebClient(process.env.SLACK_BOT_TOKEN);
-        let response = await web.conversations.history({channel: dataChannelId});
-        let responseObj = Object.values(response.messages);
-        let raw = await this._filterByUrl(responseObj, reportUrl);
-        let rawWithoutUrl = raw.replace(/<http:\S+failedRerunTests\.txt>/, '');
-        return rawWithoutUrl.split('\n');
+        try {
+            const dataChannelId = process.env.FAILED_ANALYTICS_CHANNEL;
+            const web = new WebClient(process.env.SLACK_BOT_TOKEN);
+            let response = await web.conversations.history({channel: dataChannelId});
+            let responseObj = Object.values(response.messages);
+            let raw = await this._filterByUrl(responseObj, reportUrl);
+            let rawWithoutUrl = raw.replace(/<http:\S+failedRerunTests\.txt>/, '');
+            return rawWithoutUrl.split('\n');
+        } catch (error) {
+            console.log('Ошибка при получении данных из failedRerunTests.txt');
+        }
     };
 
     async _filterByUrl(responseObj, url) {
@@ -119,14 +123,14 @@ class SlackService {
             for (let message of previousMessages) {
                 let tagName = message.match(/\d+-master.*/)[0]
                 if (tagName !== lastTagName) {
-                    previousMessage = message
-                    previousTagName = tagName
+                    previousMessage = message;
+                    previousTagName = tagName;
                     break;
                 }
             }
             let previousFailedTestsUrl = previousMessage.match(/http:\S+failedRerunTests\.txt/)[0];
 
-            return {lastTagName: lastFailedTestsUrl, previousTagName: previousFailedTestsUrl};
+            return {lastFailedTestsUrl: lastFailedTestsUrl, previousFailedTestsUrl: previousFailedTestsUrl, previousTagName: previousTagName};
 
         } catch (error) {
             console.log('Не удалось получить данные для сравнения');
