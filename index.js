@@ -36,6 +36,7 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({context, message, say}) => {
     const reportProdChannelId = process.env.REPORT_PROD_CHANNEL_ID;
     if (context.matches.input && message.channel === reportProdChannelId) {
         let diff = await slackService.getDiff(reportProdChannelId);
+        if (!diff) return;
         if (diff.diffCount === 0) {
             await slackService.sendReplyToLastMsg(reportProdChannelId, `Сравнил этот тег с предыдущим *${diff.previousTagName}*. Новых упаших тестов не появилось :clap:`);
         }

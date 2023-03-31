@@ -14,14 +14,23 @@ class SlackService {
      */
     async getDiff(channelId) {
         let compare = await this._getDataForCompare(channelId);
+        if (!compare) return;
+        console.log(compare.lastFailedTestsUrl);
         let lastFailedTests = await this._getFailedTests(compare.lastFailedTestsUrl);
+        console.log(compare.previousFailedTestsUrl);
+
         let previousFailedTests = await this._getFailedTests(compare.previousFailedTestsUrl);
         let diff = lastFailedTests.filter(x => !previousFailedTests.includes(x));
         let diffCount = diff.length;
         let chunkCount = Math.floor(diffCount / 20);
         let chunkSize = Math.floor(diffCount / chunkCount);
         let result = await this._sliceIntoChunks(diff, chunkSize);
-        return {diffCount: diffCount, chunkCount: chunkCount, message: result, previousTagName:compare.previousTagName};
+        return {
+            diffCount: diffCount,
+            chunkCount: chunkCount,
+            message: result,
+            previousTagName: compare.previousTagName
+        };
     }
 
     /**
@@ -41,7 +50,9 @@ class SlackService {
     async _getDataForCompare(channelId) {
         let reports = await this._getReports(channelId);
         let filtered = await this._filterByGroup(reports);
-        return await this._getMessagesToCompare(filtered)
+        if (filtered) {
+            return await this._getMessagesToCompare(filtered)
+        }
     }
 
     async _getFailedTests(reportUrl) {
@@ -103,9 +114,10 @@ class SlackService {
 
     async _filterByGroup(messages) {
         try {
-            if (messages[0].match(/-acceptance.*/)) return messages.filter(value => /-acceptance.*/.test(value));
-            else if (messages[0].match(/-api.*/)) return messages.filter(value => /-api.*/.test(value));
-            else if (messages[0].match(/-backend.*/)) return messages.filter(value => /-backend.*/.test(value));
+            if (messages[0].match(/-acceptance.*/) && !messages[0].match(/\d+-canary.*/)) return messages.filter(value => /-acceptance.*/.test(value));
+            else if (messages[0].match(/-api.*/) && !messages[0].match(/\d+-canary.*/)) return messages.filter(value => /-api.*/.test(value));
+            else if (messages[0].match(/-backend.*/) && !messages[0].match(/\d+-canary.*/)) return messages.filter(value => /-backend.*/.test(value));
+            else (console.log('Тег не подходит под условия'));
         } catch (error) {
             console.log('Ошибка при фильтрации сообщений по группе');
         }
@@ -121,7 +133,11 @@ class SlackService {
             let previousTagName = '';
 
             for (let message of previousMessages) {
-                let tagName = message.match(/\d+-master.*/)[0]
+                console.log(message);
+                if(message.match(/\d+-canary.*/)) {
+                    continue
+                }
+                let tagName = message.match(/\d+-master.*/)[0];
                 if (tagName !== lastTagName) {
                     previousMessage = message;
                     previousTagName = tagName;
@@ -130,7 +146,11 @@ class SlackService {
             }
             let previousFailedTestsUrl = previousMessage.match(/http:\S+failedRerunTests\.txt/)[0];
 
-            return {lastFailedTestsUrl: lastFailedTestsUrl, previousFailedTestsUrl: previousFailedTestsUrl, previousTagName: previousTagName};
+            return {
+                lastFailedTestsUrl: lastFailedTestsUrl,
+                previousFailedTestsUrl: previousFailedTestsUrl,
+                previousTagName: previousTagName
+            };
 
         } catch (error) {
             console.log('Не удалось получить данные для сравнения');
@@ -146,7 +166,7 @@ class SlackService {
         return res;
     }
 
-     declination(number) {
+    declination(number) {
         let titles = ['тест', 'теста', 'тестов'];
         let cases = [2, 0, 1, 1, 1, 2];
         return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
