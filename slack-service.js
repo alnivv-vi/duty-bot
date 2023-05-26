@@ -114,9 +114,9 @@ class SlackService {
 
     async _filterByGroup(messages) {
         try {
-            if (messages[0].match(/-acceptance.*/) && !messages[0].match(/\d+-canary.*/)) return messages.filter(value => /-acceptance.*/.test(value));
-            else if (messages[0].match(/-api.*/) && !messages[0].match(/\d+-canary.*/)) return messages.filter(value => /-api.*/.test(value));
-            else if (messages[0].match(/-backend.*/) && !messages[0].match(/\d+-canary.*/)) return messages.filter(value => /-backend.*/.test(value));
+            if (messages[0].match(/-acceptance.*/)) return messages.filter(value => /-acceptance.*/.test(value));
+            else if (messages[0].match(/-api.*/)) return messages.filter(value => /-api.*/.test(value));
+            else if (messages[0].match(/-backend.*/)) return messages.filter(value => /-backend.*/.test(value));
             else (console.log('Тег не подходит под условия'));
         } catch (error) {
             console.log('Ошибка при фильтрации сообщений по группе');
@@ -125,9 +125,8 @@ class SlackService {
 
     async _getMessagesToCompare(messages) {
         try {
-            let lastMessage = messages[0]
-            let lastTagName = lastMessage.match(/\d+-master.*/)[0];
-            let lastFailedTestsUrl = lastMessage.match(/http:\S+failedRerunTests\.txt/)[0];
+            let lastTagName = messages[0];
+            let lastFailedTestsUrl = lastTagName.match(/http:\S+failedRerunTests\.txt/)[0];
             let previousMessages = messages.slice(1);
             let previousMessage = [];
             let previousTagName = '';
