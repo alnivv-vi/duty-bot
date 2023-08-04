@@ -21,7 +21,7 @@ app.command('/duty', async ({command, ack, say}) => {
             return
         }
         if (typeof dutyName === "undefined") {
-            await say(`Просыпаюсь... Повторите попытку через несколько секунд`);
+            await say(`Не удалось определить дежурного`);
         } else {
             await say(`Дежурит ${dutyName}. <@${dutySlackId}>, help!`);
         }

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | текст диффа">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slack-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/slack-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +161,7 @@
       <workItem from="1675444205853" duration="4268000" />
       <workItem from="1675663862186" duration="675000" />
       <workItem from="1675749384320" duration="2004000" />
+      <workItem from="1685087024861" duration="3752000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>

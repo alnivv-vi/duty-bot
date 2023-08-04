@@ -80,19 +80,19 @@ class SlackService {
             // Проверяем предыдущие сообщения.
             // Если перед сообщением со ссылкой на отчёт есть сообщение без ссылки, значит slack сплитил сообщение, и нужно его соединить
             let previousMessages = messages.slice(index + 1);
+            let currentIndex = 0;
             let fullMessage = message;
-            previousMessages.every(function (value, i) {
-                let indexWithUrl = previousMessages.findIndex(el => el.includes('failedRerunTests.txt'));
-                if (indexWithUrl === 0) {
-                    return false
-                } else {
-                    let message = previousMessages[i];
-                    fullMessage += message;
-                    previousMessages = previousMessages.slice(1);
-                    return true;
+            while (currentIndex < previousMessages.length) {
+                if (currentIndex === 0 && previousMessages[currentIndex].includes("failedRerunTests.txt")) {
+                    break;
                 }
-
-            });
+                if (!previousMessages[currentIndex].includes("failedRerunTests.txt")) {
+                    fullMessage += previousMessages[currentIndex];
+                    previousMessages.splice(currentIndex, 1);
+                } else {
+                    currentIndex++;
+                }
+            }
             return fullMessage;
         } catch (error) {
             console.log('Ошибка при поиске сообщения в канале #site-autotest-failed-analytics');
