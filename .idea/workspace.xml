@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | localtunnel off" />
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* |node version upd">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,6 +163,7 @@
       <workItem from="1675749384320" duration="2004000" />
       <workItem from="1685087024861" duration="3752000" />
       <workItem from="1692970375511" duration="644000" />
+      <workItem from="1693321793936" duration="1878000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -421,7 +424,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692970417654</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="* | vercel added">
+      <created>1693321952443</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1693321952443</updated>
+    </task>
+    <task id="LOCAL-00039" summary="* |node version upd">
+      <created>1693322140244</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1693322140244</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,17 +477,8 @@
     <MESSAGE value="* | lt up" />
     <MESSAGE value="* | текст диффа" />
     <MESSAGE value="* | localtunnel off" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | localtunnel off" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/google-doc.js</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="* | vercel added" />
+    <MESSAGE value="* |node version upd" />
+    <option name="LAST_COMMIT_MESSAGE" value="* |node version upd" />
   </component>
 </project>

@@ -14,6 +14,7 @@ app.command('/duty', async ({command, ack, say}) => {
     await ack();
 
     try {
+        await googleDocService.start();
         const dutyName = googleDocService.getActualDutyName();
         const dutySlackId = googleDocService.getActualDutyId();
         if (dutyName === '' || dutySlackId === '') {
