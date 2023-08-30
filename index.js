@@ -160,8 +160,9 @@ app.view('flaky_callback', async ({ack, view, client},) => {
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡');
     cron.schedule('0 1 * * *', () => {
-        googleDocService.start();
+        googleDocService.fetchDutyData();
     });
+    await googleDocService.start();
     await localTunnel(process.env.PORT || 3000, { subdomain: "vi-duty-bot5" }, function(err, tunnel) {
             console.log('localTunnel running')
         });

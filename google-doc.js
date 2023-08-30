@@ -2,7 +2,7 @@ const axios = require('axios');
 
 class GoogleDocService {
     async start() {
-        await this._fetchDutyData();
+        await this.fetchDutyData();
     }
 
     getActualDutyId() {
@@ -13,7 +13,7 @@ class GoogleDocService {
         return this._dutyName;
     }
 
-    async _fetchDutyData() {
+    async fetchDutyData() {
         axios
             .get( process.env.GOOGLE_SCRIPT_URL)
             .then(res => {
