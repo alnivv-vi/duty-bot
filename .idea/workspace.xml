@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* |node version upd">
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | node-cron added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +49,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/snap/phpstorm/312/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/alnivv/.local/share/JetBrains/Toolbox/apps/PhpStorm/ch-0/223.8836.42/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -163,7 +163,7 @@
       <workItem from="1675749384320" duration="2004000" />
       <workItem from="1685087024861" duration="3752000" />
       <workItem from="1692970375511" duration="644000" />
-      <workItem from="1693321793936" duration="1878000" />
+      <workItem from="1693321793936" duration="3189000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -438,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693322140244</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="* | node-cron added">
+      <created>1693325671487</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1693325671487</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,6 +486,7 @@
     <MESSAGE value="* | localtunnel off" />
     <MESSAGE value="* | vercel added" />
     <MESSAGE value="* |node version upd" />
-    <option name="LAST_COMMIT_MESSAGE" value="* |node version upd" />
+    <MESSAGE value="* | node-cron added" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | node-cron added" />
   </component>
 </project>

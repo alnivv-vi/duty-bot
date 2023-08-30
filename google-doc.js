@@ -1,5 +1,4 @@
 const axios = require('axios');
-const cron = require('node-cron');
 
 class GoogleDocService {
     async start() {

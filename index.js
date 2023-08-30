@@ -1,6 +1,7 @@
 const googleDocService = require('./google-doc');
 const slackService = require('./slack-service');
 const flakyService = require('./flaky');
+const cron = require('node-cron');
 const localTunnel = require('localtunnel');
 const {App} = require('@slack/bolt');
 require('dotenv').config();
@@ -14,7 +15,6 @@ app.command('/duty', async ({command, ack, say}) => {
     await ack();
 
     try {
-        await googleDocService.start();
         const dutyName = googleDocService.getActualDutyName();
         const dutySlackId = googleDocService.getActualDutyId();
         if (dutyName === '' || dutySlackId === '') {
@@ -159,7 +159,9 @@ app.view('flaky_callback', async ({ack, view, client},) => {
 
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡');
-    await googleDocService.start();
+    cron.schedule('0 1 * * *', () => {
+        googleDocService.start();
+    });
     await localTunnel(process.env.PORT || 3000, { subdomain: "vi-duty-bot5" }, function(err, tunnel) {
             console.log('localTunnel running')
         });
