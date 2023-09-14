@@ -40,8 +40,7 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({context, message, say}) => {
         if (!diff) return;
         if (diff.diffCount === 0) {
             await slackService.sendReplyToLastMsg(reportProdChannelId, `Сравнил этот тег с предыдущим *${diff.previousTagName}*. Новых упаших тестов не появилось :clap:`);
-        }
-        else await slackService.sendReplyToLastMsg(reportProdChannelId, `Сравнил этот тег с предыдущим *${diff.previousTagName}*. Новые упавшие тесты:\n :point_down:`);
+        } else await slackService.sendReplyToLastMsg(reportProdChannelId, `Сравнил этот тег с предыдущим *${diff.previousTagName}*. Новые упавшие тесты:\n :point_down:`);
         // В зависимости от размера отправляемого сообщения (т.е. от количества новых упавших тестов) оно может быть разбито на части
         let chunkCount = diff.chunkCount;
         for (let i = 0; i <= chunkCount; i++) {
@@ -163,8 +162,12 @@ app.view('flaky_callback', async ({ack, view, client},) => {
         googleDocService.fetchDutyData();
     });
     await googleDocService.start();
-    // await localTunnel(process.env.PORT || 3000, { subdomain: "vi-duty-bot5" }, function(err, tunnel) {
-    //         console.log('localTunnel running')
-    //     });
+    try {
+        await localTunnel(process.env.PORT || 3000, {subdomain: "vi-duty-bot5"}, function (err, tunnel) {
+            console.log('localTunnel running')
+        });
+    } catch (e) {
+        console.error(e)
+    }
     await app.start(process.env.PORT || 3000);
 })();
