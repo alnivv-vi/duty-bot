@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | добавил отправку запроса каждый раз при вызове команды duty">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/google-doc.js" beforeDir="false" afterPath="$PROJECT_DIR$/google-doc.js" afterDir="false" />
-    </list>
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +169,7 @@
       <workItem from="1693377187657" duration="1110000" />
       <workItem from="1694172428074" duration="53000" />
       <workItem from="1700222170907" duration="597000" />
-      <workItem from="1700222782010" duration="4590000" />
+      <workItem from="1700222782010" duration="4900000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -469,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700227680471</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="* | fix">
+      <option name="closed" value="true" />
+      <created>1700229442905</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1700229442905</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +492,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* | env config added" />
     <MESSAGE value="* | обработка ошибок" />
     <MESSAGE value="* | отладка" />
     <MESSAGE value="* | new feat. test results diff" />
@@ -512,6 +516,7 @@
     <MESSAGE value="* |node version upd" />
     <MESSAGE value="* | node-cron added" />
     <MESSAGE value="* | добавил отправку запроса каждый раз при вызове команды duty" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | добавил отправку запроса каждый раз при вызове команды duty" />
+    <MESSAGE value="* | fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | fix" />
   </component>
 </project>
