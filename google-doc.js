@@ -14,8 +14,12 @@ class GoogleDocService {
     }
 
     async fetchDutyData() {
-        axios
-            .get( process.env.GOOGLE_SCRIPT_URL)
+        this._dutyId = undefined;
+        this._dutyName = undefined;
+        axios({method: 'get',
+            url: process.env.GOOGLE_SCRIPT_URL,
+            timeout: 15000,
+            signal: AbortSignal.timeout(15000)})
             .then(res => {
                 this._dutyId = res.data.id;
                 this._dutyName = res.data.duty;
