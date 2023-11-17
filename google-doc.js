@@ -16,7 +16,7 @@ class GoogleDocService {
         try {
             const response = await fetch(process.env.GOOGLE_SCRIPT_URL, {
                 method: 'GET',
-                timeout: 15000,
+                timeout: 5000,
                 signal: new AbortController().signal
             });
             const data = await response.json();
