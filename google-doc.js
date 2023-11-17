@@ -1,4 +1,3 @@
-const axios = require('axios');
 
 class GoogleDocService {
     async start() {
@@ -14,20 +13,20 @@ class GoogleDocService {
     }
 
     async fetchDutyData() {
-        axios({method: 'get',
-            url: process.env.GOOGLE_SCRIPT_URL,
-            timeout: 15000,
-            signal: AbortSignal.timeout(15000)})
-            .then(res => {
-                this._dutyId = res.data.id;
-                this._dutyName = res.data.duty;
-                console.log(this._dutyName)
-            })
-            .catch(error => {
-                console.error(error);
+        try {
+            const response = await fetch(process.env.GOOGLE_SCRIPT_URL, {
+                method: 'GET',
+                timeout: 15000,
+                signal: new AbortController().signal
             });
+            const data = await response.json();
+            this._dutyId = data.id;
+            this._dutyName = data.duty;
+            console.log(this._dutyName);
+        } catch (error) {
+            console.error(error);
+        }
     }
-
 }
 
 module.exports = (function () {

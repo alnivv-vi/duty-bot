@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fix" />
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fix fetchDutyData">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,7 +171,7 @@
       <workItem from="1693377187657" duration="1110000" />
       <workItem from="1694172428074" duration="53000" />
       <workItem from="1700222170907" duration="597000" />
-      <workItem from="1700222782010" duration="4900000" />
+      <workItem from="1700222782010" duration="6481000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -474,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700229442905</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="* | fix fetchDutyData">
+      <option name="closed" value="true" />
+      <created>1700229902711</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1700229902711</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* | обработка ошибок" />
     <MESSAGE value="* | отладка" />
     <MESSAGE value="* | new feat. test results diff" />
     <MESSAGE value="* | debug" />
@@ -517,6 +526,7 @@
     <MESSAGE value="* | node-cron added" />
     <MESSAGE value="* | добавил отправку запроса каждый раз при вызове команды duty" />
     <MESSAGE value="* | fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | fix" />
+    <MESSAGE value="* | fix fetchDutyData" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | fix fetchDutyData" />
   </component>
 </project>
