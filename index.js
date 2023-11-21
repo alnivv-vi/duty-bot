@@ -15,16 +15,15 @@ app.command('/duty', async ({command, ack, say}) => {
 
     try {
         await googleDocService.start();
-        const dutyName = googleDocService.getActualDutyName();
         const dutySlackId = googleDocService.getActualDutyId();
-        if (dutyName === '' || dutySlackId === '') {
+        if (dutySlackId === '') {
             await say('Не удалось получить значение из таблицы с графиком дежурств. Обратитесь в #site-qa-automation');
             return
         }
-        if (typeof dutyName === "undefined") {
+        if (typeof dutySlackId === "undefined") {
             await say(`Не удалось определить дежурного. Повторите попытку или обратитесь в #site-qa-automation`);
         } else {
-            await say(`Дежурит ${dutyName}. <@${dutySlackId}>, help!`);
+            await say(`Дежурит <@${dutySlackId}>`);
         }
 
     } catch (e) {

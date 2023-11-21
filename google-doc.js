@@ -8,10 +8,6 @@ class GoogleDocService {
         return this._dutyId;
     }
 
-    getActualDutyName() {
-        return this._dutyName;
-    }
-
     async fetchDutyData() {
         try {
             const response = await fetch(process.env.GOOGLE_SCRIPT_URL, {
@@ -21,8 +17,6 @@ class GoogleDocService {
             });
             const data = await response.json();
             this._dutyId = data.id;
-            this._dutyName = data.duty;
-            console.log(this._dutyName);
         } catch (error) {
             console.error(error);
         }
