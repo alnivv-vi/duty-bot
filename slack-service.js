@@ -136,7 +136,7 @@ class SlackService {
                 if(message.match(/\d+-canary.*/)) {
                     continue
                 }
-                let tagName = message.match(/\d+-master.*/)[0];
+                let tagName = message.match(/\d+master.*/)[0];
                 if (tagName !== lastTagName) {
                     previousMessage = message;
                     previousTagName = tagName;
