@@ -157,16 +157,19 @@ app.view('flaky_callback', async ({ack, view, client},) => {
 
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡');
-    cron.schedule('0 1 * * *', () => {
-        googleDocService.fetchDutyData();
+    cron.schedule('11 18 * * 1-5', () => {
+        googleDocService.start();
+        const dutySlackId = googleDocService.getActualDutyId();
+        if (dutySlackId === '') {
+            slackService.sendMsgToSiteQaAutomation('Не удалось получить значение из таблицы с графиком дежурств')
+        }
+        if (typeof dutySlackId === "undefined") {
+            slackService.sendMsgToSiteQaAutomation('Не удалось определить дежурного')
+        } else {
+            slackService.sendMsgToSiteQaAutomation(`Дежурит <@${dutySlackId}>`)
+        }
     });
     await googleDocService.start();
-    // try {
-    //     await localTunnel(process.env.PORT || 3000, {subdomain: "vi-duty-bot5"}, function (err, tunnel) {
-    //         console.log('localTunnel running')
-    //     });
-    // } catch (e) {
-    //     console.error(e)
-    // }
+
     await app.start(process.env.PORT || 3000);
 })();

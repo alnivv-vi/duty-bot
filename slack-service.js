@@ -165,6 +165,11 @@ class SlackService {
         return res;
     }
 
+    async sendMsgToSiteQaAutomation(text) {
+        const web = new WebClient(process.env.SLACK_BOT_TOKEN);
+        await web.chat.postMessage({channel: process.env.SITE_QA_AUTOMATION_CHANNEL_ID, text: text})
+    }
+
     declination(number) {
         let titles = ['тест', 'теста', 'тестов'];
         let cases = [2, 0, 1, 1, 1, 2];
