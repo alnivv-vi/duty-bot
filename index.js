@@ -156,20 +156,21 @@ app.view('flaky_callback', async ({ack, view, client},) => {
 });
 
 (async () => {
-    console.log('⚡️duty-bot готов к работе ⚡');
+    console.log('⚡️duty-bot готов к работе ⚡️');
     await googleDocService.start();
-    cron.schedule('20 21 * * 1-5', () => {
-        console.log('Cron started')
-        // googleDocService.start();
+
+    const sendDutyMessage = async () => {
+        console.log('Cron started');
         const dutySlackId = googleDocService.getActualDutyId();
         if (dutySlackId === '') {
-            slackService.sendMsgToSiteQaAutomation('Не удалось получить значение из таблицы с графиком дежурств')
-        }
-        if (typeof dutySlackId === "undefined") {
-            slackService.sendMsgToSiteQaAutomation('Не удалось определить дежурного')
+            await slackService.sendMsgToSiteQaAutomation('Не удалось получить значение из таблицы с графиком дежурств');
+        } else if (typeof dutySlackId === "undefined") {
+            await  slackService.sendMsgToSiteQaAutomation('Не удалось определить дежурного');
         } else {
-            slackService.sendMsgToSiteQaAutomation(`Дежурит <@${dutySlackId}>`)
+            await   slackService.sendMsgToSiteQaAutomation(`Дежурит <@${dutySlackId}>`)
         }
-    });
+    };
+
+    cron.schedule('46 21 * * 1-5', sendDutyMessage);
     await app.start(process.env.PORT || 3000);
 })();
