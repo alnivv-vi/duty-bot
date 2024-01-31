@@ -158,8 +158,7 @@ app.view('flaky_callback', async ({ack, view, client},) => {
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡');
     await googleDocService.start();
-    await app.start(process.env.PORT || 3000);
-    cron.schedule('11 21 * * 1-5', () => {
+    cron.schedule('10 21 * * 1-5', () => {
         console.log('Cron started')
         // googleDocService.start();
         const dutySlackId = googleDocService.getActualDutyId();
@@ -172,5 +171,5 @@ app.view('flaky_callback', async ({ack, view, client},) => {
             slackService.sendMsgToSiteQaAutomation(`Дежурит <@${dutySlackId}>`)
         }
     });
-
+    await app.start(process.env.PORT || 3000);
 })();
