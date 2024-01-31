@@ -157,8 +157,7 @@ app.view('flaky_callback', async ({ack, view, client},) => {
 
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡');
-    await googleDocService.start();
-    cron.schedule('27 20 * * 1-5', () => {
+    cron.schedule('49 20 * * *', () => {
         console.log('Cron started')
         googleDocService.start();
         const dutySlackId = googleDocService.getActualDutyId();
