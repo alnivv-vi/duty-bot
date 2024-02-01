@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | фикс для отправки диффа для веток, запускаемых через run pipeline">
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fix cron time">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slack-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/slack-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +176,7 @@
       <workItem from="1700460056710" duration="611000" />
       <workItem from="1702908147287" duration="3812000" />
       <workItem from="1702965917354" duration="597000" />
+      <workItem from="1706767439149" duration="1272000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -504,7 +505,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702911628278</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="* | fix cron time">
+      <option name="closed" value="true" />
+      <created>1706767509350</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1706767509351</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +531,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* | debug" />
     <MESSAGE value="* | поправил reportProdChannelId" />
     <MESSAGE value="* | refactoring" />
     <MESSAGE value="* | localTunnel added" />
@@ -547,6 +555,7 @@
     <MESSAGE value="* | fix fetchDutyData" />
     <MESSAGE value="* | поменял axios на fetch" />
     <MESSAGE value="* | фикс для отправки диффа для веток, запускаемых через run pipeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | фикс для отправки диффа для веток, запускаемых через run pipeline" />
+    <MESSAGE value="* | fix cron time" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | fix cron time" />
   </component>
 </project>
