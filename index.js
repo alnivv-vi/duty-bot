@@ -160,7 +160,7 @@ app.view('flaky_callback', async ({ack, view, client},) => {
     await googleDocService.start();
 
     const sendDutyMessage = async () => {
-        console.log('Cron started');
+        console.log('sendMsgToSiteQaAutomation Cron started');
         const dutySlackId = googleDocService.getActualDutyId();
         if (dutySlackId === '') {
             await slackService.sendMsgToSiteQaAutomation('Не удалось получить значение из таблицы с графиком дежурств');
@@ -171,6 +171,6 @@ app.view('flaky_callback', async ({ack, view, client},) => {
         }
     };
 
-    cron.schedule('33 09 * * 1-5', sendDutyMessage);
+    cron.schedule('00 06 * * 1-5', sendDutyMessage);
     await app.start(process.env.PORT || 3000);
 })();
