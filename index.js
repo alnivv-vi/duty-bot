@@ -171,6 +171,6 @@ app.view('flaky_callback', async ({ack, view, client},) => {
         }
     };
 
-    cron.schedule('3 9 * * 1-5', sendDutyMessage);
+    cron.schedule('13 9 * * 1-5', sendDutyMessage);
     await app.start(process.env.PORT || 3000);
 })();
