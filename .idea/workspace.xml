@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fix cron time">
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | update packages">
+      <change afterPath="$PROJECT_DIR$/greenstreak.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vercel-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vercel-edge-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slack-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/slack-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +38,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alnivv-vi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6c985207-1780-4b25-8761-bc59b3025ab8" />
+        <option name="url" value="https://github.com/alnivv-vi/duty-bot.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -46,19 +67,21 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;14.17.6&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;14.17.6&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/alnivv/TestAutomation/duty-bot&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.13.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alnivv/PhpstormProjects/duty-bot&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/alnivv/.local/share/JetBrains/Toolbox/apps/PhpStorm/ch-0/223.8836.42/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/alnivv/.local/share/JetBrains/Toolbox/apps/phpstorm/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -67,7 +90,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="Node.js.index.js">
     <configuration name="index.js" type="NodeJSConfigurationType" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
       <envs>
         <env name="GOOGLE_SCRIPT_URL" value="https://script.google.com/macros/s/AKfycbx5BoWAYbWArxk09sb0u1wRPrmiWCFllfm2vSqV81DHmIH3BHozjiizj2UXy82hmANpcQ/exec" />
@@ -113,6 +136,13 @@
         <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14015.96" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -181,6 +211,12 @@
       <workItem from="1702908147287" duration="3812000" />
       <workItem from="1702965917354" duration="597000" />
       <workItem from="1706767439149" duration="1272000" />
+      <workItem from="1706875642813" duration="4563000" />
+      <workItem from="1706885207052" duration="1773000" />
+      <workItem from="1707136826615" duration="6623000" />
+      <workItem from="1707207750066" duration="10637000" />
+      <workItem from="1707314564760" duration="7019000" />
+      <workItem from="1707379365865" duration="31918000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -469,14 +505,6 @@
       <option name="project" value="LOCAL" />
       <updated>1693377361375</updated>
     </task>
-    <task id="LOCAL-00042" summary="* | добавил отправку запроса каждый раз при вызове команды duty">
-      <option name="closed" value="true" />
-      <created>1700227680471</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1700227680471</updated>
-    </task>
     <task id="LOCAL-00043" summary="* | fix">
       <option name="closed" value="true" />
       <created>1700229442905</created>
@@ -533,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706864982764</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="* | update packages">
+      <option name="closed" value="true" />
+      <created>1706880143890</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1706880143890</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +587,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* | поправил reportProdChannelId" />
     <MESSAGE value="* | refactoring" />
     <MESSAGE value="* | localTunnel added" />
     <MESSAGE value="* | localTunnel fix" />
@@ -576,6 +611,7 @@
     <MESSAGE value="* | поменял axios на fetch" />
     <MESSAGE value="* | фикс для отправки диффа для веток, запускаемых через run pipeline" />
     <MESSAGE value="* | fix cron time" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | fix cron time" />
+    <MESSAGE value="* | update packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | update packages" />
   </component>
 </project>

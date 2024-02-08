@@ -48,7 +48,7 @@ class SlackService {
     }
 
     async _getDataForCompare(channelId) {
-        let reports = await this._getReports(channelId);
+        let reports = await this._getFailedReports(channelId);
         let filtered = await this._filterByGroup(reports);
         if (filtered) {
             return await this._getMessagesToCompare(filtered)
@@ -99,7 +99,7 @@ class SlackService {
         }
     };
 
-    async _getReports(channelId) {
+    async _getFailedReports(channelId) {
         try {
             const web = new WebClient(process.env.SLACK_BOT_TOKEN);
             let response = await web.conversations.history({channel: channelId});

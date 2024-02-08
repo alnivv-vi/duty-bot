@@ -1,6 +1,7 @@
 const googleDocService = require('./google-doc');
 const slackService = require('./slack-service');
 const flakyService = require('./flaky');
+const greenStreak = require('./greenstreak');
 const cron = require('node-cron');
 const {App} = require('@slack/bolt');
 require('dotenv').config();
@@ -48,6 +49,15 @@ app.message(/(\/failedRerunTests\.txt).*/, async ({context, message, say}) => {
                 await slackService.sendReplyToLastMsg(reportProdChannelId, `\`\`\`${message}\`\`\``);
             }
         }
+    }
+});
+app.message(/acceptance\.html[\s\S]*All tests passed!*/, async ({context, message, say}) => {
+    const reportProdChannelId = process.env.REPORT_PROD_CHANNEL_ID;
+
+    if (context.matches.input && message.channel === reportProdChannelId) {
+        let result = await greenStreak._checkGreenStreak(reportProdChannelId);
+        console.log(result)
+        if (result) await slackService.sendReplyToLastMsg(reportProdChannelId, `Green streak ${result} days!`);
     }
 });
 
@@ -172,5 +182,5 @@ app.view('flaky_callback', async ({ack, view, client},) => {
     };
 
     cron.schedule('00 06 * * 1-5', sendDutyMessage);
-    await app.start(process.env.PORT || 3000);
+    await app.start(process.env.PORT || 3003);
 })();
