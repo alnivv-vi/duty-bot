@@ -57,7 +57,7 @@ app.message(/acceptance\.html[\s\S]*All tests passed!*/, async ({context, messag
     if (context.matches.input && message.channel === reportProdChannelId) {
         let result = await greenStreak._checkGreenStreak();
         console.log(result)
-        if (result) await slackService.sendReplyToLastMsg(reportProdChannelId, `Green streak ${result} days! :dance: :dance: :dance:`);
+        if (result) await slackService.sendReplyToLastMsg(reportProdChannelId, `:dance: :dance: :dance: Green streak ${result} days! :dance: :dance: :dance:`);
     }
 });
 

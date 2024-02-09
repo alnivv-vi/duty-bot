@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | greenstreak feature fix">
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fix number to string">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +210,7 @@
       <workItem from="1707207750066" duration="10637000" />
       <workItem from="1707314564760" duration="7019000" />
       <workItem from="1707379365865" duration="32546000" />
-      <workItem from="1707458613788" duration="3102000" />
+      <workItem from="1707458613788" duration="3822000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -499,22 +499,6 @@
       <option name="project" value="LOCAL" />
       <updated>1693377361375</updated>
     </task>
-    <task id="LOCAL-00046" summary="* | фикс для отправки диффа для веток, запускаемых через run pipeline">
-      <option name="closed" value="true" />
-      <created>1702911628278</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1702911628278</updated>
-    </task>
-    <task id="LOCAL-00047" summary="* | fix cron time">
-      <option name="closed" value="true" />
-      <created>1706767509350</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1706767509351</updated>
-    </task>
     <task id="LOCAL-00048" summary="* | fix cron time">
       <option name="closed" value="true" />
       <created>1706864472658</created>
@@ -563,7 +547,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707461675610</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="* | fix port value">
+      <option name="closed" value="true" />
+      <created>1707461736460</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1707461736460</updated>
+    </task>
+    <task id="LOCAL-00055" summary="* | fix slack emoji">
+      <option name="closed" value="true" />
+      <created>1707461941495</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1707461941495</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,9 +581,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* | new version info" />
-    <MESSAGE value="* | flaky feature" />
-    <MESSAGE value="* | rateValue" />
     <MESSAGE value="* | сортировка по rateValue" />
     <MESSAGE value="* | сортировка debug" />
     <MESSAGE value="* | сортировка по рейтингу" />
@@ -606,6 +603,9 @@
     <MESSAGE value="* | greenstreak feature MVP" />
     <MESSAGE value="* | greenstreak feature" />
     <MESSAGE value="* | greenstreak feature fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | greenstreak feature fix" />
+    <MESSAGE value="* | fix port value" />
+    <MESSAGE value="* | fix slack emoji" />
+    <MESSAGE value="* | fix number to string" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | fix number to string" />
   </component>
 </project>
