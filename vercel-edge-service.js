@@ -82,7 +82,8 @@ class VercelEdgeService {
         const id = process.env.EDGE_CONFIG_ID
         const url = `https://api.vercel.com/v1/edge-config/${id}/items`;
         const token = process.env.VERCEL_API_TOKEN;
-        let dateObjMSK = new Date().toLocaleString("en-US", {timeZone: "Europe/Moscow"})
+        let dateMSK = new Date().toLocaleString("en-US", {timeZone: "Europe/Moscow"})
+        let dateObjMSK = new Date(dateMSK)
         console.log(dateObjMSK)
         let todayDate = dateObjMSK.toISOString().slice(0, 10);
         console.log(todayDate)
