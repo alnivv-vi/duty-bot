@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | update packages">
-      <change afterPath="$PROJECT_DIR$/greenstreak.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vercel-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vercel-edge-service.js" afterDir="false" />
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | greenstreak feature MVP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slack-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/slack-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/greenstreak.js" beforeDir="false" afterPath="$PROJECT_DIR$/greenstreak.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel-edge-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/vercel-edge-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +211,8 @@
       <workItem from="1707136826615" duration="6623000" />
       <workItem from="1707207750066" duration="10637000" />
       <workItem from="1707314564760" duration="7019000" />
-      <workItem from="1707379365865" duration="31918000" />
+      <workItem from="1707379365865" duration="32546000" />
+      <workItem from="1707458613788" duration="2446000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -505,14 +501,6 @@
       <option name="project" value="LOCAL" />
       <updated>1693377361375</updated>
     </task>
-    <task id="LOCAL-00043" summary="* | fix">
-      <option name="closed" value="true" />
-      <created>1700229442905</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1700229442905</updated>
-    </task>
     <task id="LOCAL-00044" summary="* | fix fetchDutyData">
       <option name="closed" value="true" />
       <created>1700229902711</created>
@@ -569,7 +557,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706880143890</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="* | greenstreak feature MVP">
+      <option name="closed" value="true" />
+      <created>1707428382971</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1707428382971</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +583,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* | refactoring" />
     <MESSAGE value="* | localTunnel added" />
     <MESSAGE value="* | localTunnel fix" />
     <MESSAGE value="* | new version info" />
@@ -612,6 +607,7 @@
     <MESSAGE value="* | фикс для отправки диффа для веток, запускаемых через run pipeline" />
     <MESSAGE value="* | fix cron time" />
     <MESSAGE value="* | update packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | update packages" />
+    <MESSAGE value="* | greenstreak feature MVP" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | greenstreak feature MVP" />
   </component>
 </project>

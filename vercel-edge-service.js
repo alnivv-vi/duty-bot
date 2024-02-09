@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-const {createClient} = require('@vercel/edge-config');
 const moment = require("moment/moment");
 const ConfigSingleton = require('./vercel-config');
 const Holidays = require('date-holidays');
@@ -48,6 +47,7 @@ class VercelEdgeService {
                 console.log("isWorkingDay - " + isWorkingDay)
                 if (isWorkingDay) {
                     console.log('Зеленая серия прерывалась в дату: ' + new Date(date))
+                    await this._updateGreenstreak(Number(1))
                     break; // Выходим из цикла, если текущий день не является праздничным
                 } else {
 
