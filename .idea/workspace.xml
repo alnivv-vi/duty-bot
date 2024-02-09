@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | greenstreak feature" />
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | greenstreak feature fix">
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,7 +210,7 @@
       <workItem from="1707207750066" duration="10637000" />
       <workItem from="1707314564760" duration="7019000" />
       <workItem from="1707379365865" duration="32546000" />
-      <workItem from="1707458613788" duration="2770000" />
+      <workItem from="1707458613788" duration="3102000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -497,14 +499,6 @@
       <option name="project" value="LOCAL" />
       <updated>1693377361375</updated>
     </task>
-    <task id="LOCAL-00045" summary="* | поменял axios на fetch">
-      <option name="closed" value="true" />
-      <created>1700231561328</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1700231561328</updated>
-    </task>
     <task id="LOCAL-00046" summary="* | фикс для отправки диффа для веток, запускаемых через run pipeline">
       <option name="closed" value="true" />
       <created>1702911628278</created>
@@ -561,7 +555,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707461391027</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="* | greenstreak feature fix">
+      <option name="closed" value="true" />
+      <created>1707461675609</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1707461675610</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +581,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* | localTunnel fix" />
     <MESSAGE value="* | new version info" />
     <MESSAGE value="* | flaky feature" />
     <MESSAGE value="* | rateValue" />
@@ -604,6 +605,7 @@
     <MESSAGE value="* | update packages" />
     <MESSAGE value="* | greenstreak feature MVP" />
     <MESSAGE value="* | greenstreak feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | greenstreak feature" />
+    <MESSAGE value="* | greenstreak feature fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | greenstreak feature fix" />
   </component>
 </project>
