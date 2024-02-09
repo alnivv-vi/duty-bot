@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fix timezone">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vercel-edge-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/vercel-edge-service.js" afterDir="false" />
-    </list>
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fix timezone" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +208,7 @@
       <workItem from="1707207750066" duration="10637000" />
       <workItem from="1707314564760" duration="7019000" />
       <workItem from="1707379365865" duration="32546000" />
-      <workItem from="1707458613788" duration="12038000" />
+      <workItem from="1707458613788" duration="12412000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -500,14 +497,6 @@
       <option name="project" value="LOCAL" />
       <updated>1693377361375</updated>
     </task>
-    <task id="LOCAL-00050" summary="* | update packages">
-      <option name="closed" value="true" />
-      <created>1706880143890</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1706880143890</updated>
-    </task>
     <task id="LOCAL-00051" summary="* | greenstreak feature MVP">
       <option name="closed" value="true" />
       <created>1707428382971</created>
@@ -564,7 +553,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707470190686</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="* | fix timezone">
+      <option name="closed" value="true" />
+      <created>1707470704170</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1707470704170</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

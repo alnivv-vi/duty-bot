@@ -84,9 +84,7 @@ class VercelEdgeService {
         const token = process.env.VERCEL_API_TOKEN;
         let dateMSK = new Date().toLocaleString("en-US", {timeZone: "Europe/Moscow"})
         let dateObjMSK = new Date(dateMSK)
-        console.log(dateObjMSK)
         let todayDate = dateObjMSK.toISOString().slice(0, 10);
-        console.log(todayDate)
         const options = {
             method: 'PATCH',
             headers: {
