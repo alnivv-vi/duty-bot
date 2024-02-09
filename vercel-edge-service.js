@@ -82,8 +82,10 @@ class VercelEdgeService {
         const id = process.env.EDGE_CONFIG_ID
         const url = `https://api.vercel.com/v1/edge-config/${id}/items`;
         const token = process.env.VERCEL_API_TOKEN;
-        //TODO поправить с учётом таймзоны UTC+3, иначе с 00:00 до 03:00 по МСК дата не будет апдейтиться
-        let todayDate = new Date().toISOString().slice(0, 10);
+        let dateObjMSK = new Date().toLocaleString("en-US", {timeZone: "Europe/Moscow"})
+        console.log(dateObjMSK)
+        let todayDate = dateObjMSK.toISOString().slice(0, 10);
+        console.log(todayDate)
         const options = {
             method: 'PATCH',
             headers: {
