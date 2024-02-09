@@ -47,11 +47,16 @@ class VercelEdgeService {
                 console.log("isWorkingDay - " + isWorkingDay)
                 if (isWorkingDay) {
                     console.log('Зеленая серия прерывалась в дату: ' + new Date(date))
+                    // если зеленая серия прерывалась, то проставляем текущий greenstreak = 1
                     await this._updateGreenstreak(Number(1))
-                    break; // Выходим из цикла, если текущий день не является праздничным
+                    break;
                 } else {
 
                 }
+                // если все дни в промежутке между lastDate и currentDate были нерабочими, то продлеваем greenstreak
+                let currentLength = await this._getGreenstreakLength()
+                let newLength = Number(currentLength) + Number(1)
+                await this._updateGreenstreak(newLength)
             }
         }
         return result
