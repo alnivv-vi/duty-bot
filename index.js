@@ -2,7 +2,7 @@ const googleDocService = require('./google-doc');
 const slackService = require('./slack-service');
 const flakyService = require('./flaky');
 const greenStreak = require('./greenstreak');
-const cron = require('node-cron');
+const cron = require('node-schedule');
 const {App} = require('@slack/bolt');
 require('dotenv').config();
 
@@ -184,7 +184,7 @@ app.view('flaky_callback', async ({ack, view, client},) => {
     //     scheduled: true,
     //     timezone: "Europe/Moscow"
     // });
-    await cron.schedule('* * * * *', function() {
+    await cron.scheduleJob('* * * * *', function() {
         console.log('running a task every minute');
     });
     await app.start(process.env.PORT || 3000);
