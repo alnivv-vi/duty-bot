@@ -167,7 +167,8 @@ app.view('flaky_callback', async ({ack, view, client},) => {
 
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡️');
-    await cron.scheduleJob('02 15 * * 1-5', function() {
+    await googleDocService.start();
+    await cron.scheduleJob('17 15 * * 1-5', function() {
         {
             console.log('sendMsgToSiteQaAutomation Cron started');
             googleDocService.start();
