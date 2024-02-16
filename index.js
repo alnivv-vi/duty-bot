@@ -184,7 +184,7 @@ app.view('flaky_callback', async ({ack, view, client},) => {
     //     scheduled: true,
     //     timezone: "Europe/Moscow"
     // });
-    await cron.schedule('* * * * ', function() {
+    await cron.schedule('* * * * *', function() {
         console.log('running a task every minute');
     });
     await app.start(process.env.PORT || 3000);
