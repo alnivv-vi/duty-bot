@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fix timezone">
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fetch duty by cron fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +211,7 @@
       <workItem from="1707314564760" duration="7019000" />
       <workItem from="1707379365865" duration="32546000" />
       <workItem from="1707458613788" duration="12412000" />
-      <workItem from="1708090578684" duration="352000" />
+      <workItem from="1708090578684" duration="975000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -500,22 +500,6 @@
       <option name="project" value="LOCAL" />
       <updated>1693377361375</updated>
     </task>
-    <task id="LOCAL-00051" summary="* | greenstreak feature MVP">
-      <option name="closed" value="true" />
-      <created>1707428382971</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1707428382971</updated>
-    </task>
-    <task id="LOCAL-00052" summary="* | greenstreak feature">
-      <option name="closed" value="true" />
-      <created>1707461391026</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1707461391027</updated>
-    </task>
     <task id="LOCAL-00053" summary="* | greenstreak feature fix">
       <option name="closed" value="true" />
       <created>1707461675609</created>
@@ -564,7 +548,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707470704170</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="* | cron debug">
+      <option name="closed" value="true" />
+      <created>1708090943715</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1708090943716</updated>
+    </task>
+    <task id="LOCAL-00060" summary="* | fetch duty by cron fix">
+      <option name="closed" value="true" />
+      <created>1708091251962</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1708091251962</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,8 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* | сортировка debug" />
-    <MESSAGE value="* | сортировка по рейтингу" />
     <MESSAGE value="* | перенёс старт флаки-сервиса в команду" />
     <MESSAGE value="* | flaky modal added" />
     <MESSAGE value="* | flaky fix" />
@@ -607,6 +605,8 @@
     <MESSAGE value="* | fix number to string" />
     <MESSAGE value="* | fix slack emoji" />
     <MESSAGE value="* | fix timezone" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | fix timezone" />
+    <MESSAGE value="* | cron debug" />
+    <MESSAGE value="* | fetch duty by cron fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | fetch duty by cron fix" />
   </component>
 </project>
