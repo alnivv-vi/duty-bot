@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fetch duty by cron fix" />
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | cron debug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,7 +212,7 @@
       <workItem from="1707314564760" duration="7019000" />
       <workItem from="1707379365865" duration="32546000" />
       <workItem from="1707458613788" duration="12412000" />
-      <workItem from="1708090578684" duration="2669000" />
+      <workItem from="1708090578684" duration="2971000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -498,14 +501,6 @@
       <option name="project" value="LOCAL" />
       <updated>1693377361375</updated>
     </task>
-    <task id="LOCAL-00055" summary="* | fix slack emoji">
-      <option name="closed" value="true" />
-      <created>1707461941495</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1707461941495</updated>
-    </task>
     <task id="LOCAL-00056" summary="* | fix slack emoji">
       <option name="closed" value="true" />
       <created>1707462525619</created>
@@ -562,7 +557,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708092963028</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="* | cron debug">
+      <option name="closed" value="true" />
+      <created>1708093645722</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1708093645722</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,8 +606,8 @@
     <MESSAGE value="* | fix number to string" />
     <MESSAGE value="* | fix slack emoji" />
     <MESSAGE value="* | fix timezone" />
-    <MESSAGE value="* | cron debug" />
     <MESSAGE value="* | fetch duty by cron fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | fetch duty by cron fix" />
+    <MESSAGE value="* | cron debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | cron debug" />
   </component>
 </project>
