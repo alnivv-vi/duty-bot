@@ -39,7 +39,7 @@ class VercelEdgeService {
             result = newLength
         } else if (diffDays > 1) {
             console.log('Проверяем, был ли рабочий день в диапазоне между lastDate и currentDate')
-            for (let i = 1; i <= diffDays; i++) {
+            for (let i = 1; i < diffDays; i++) {
                 let newDate = new Date(lastDate);
                 newDate.setDate(lastDate.getDate() + i);
                 console.log("date - " + newDate)
