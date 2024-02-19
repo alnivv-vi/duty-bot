@@ -58,6 +58,7 @@ class VercelEdgeService {
                 let currentLength = await this._getGreenstreakLength()
                 let newLength = Number(currentLength) + Number(1)
                 await this._updateGreenstreak(newLength)
+                result = newLength
             }
         }
         return result
