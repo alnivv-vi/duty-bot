@@ -40,13 +40,14 @@ class VercelEdgeService {
         } else if (diffDays > 1) {
             console.log('Проверяем, был ли рабочий день в диапазоне между lastDate и currentDate')
             for (let i = 1; i <= diffDays; i++) {
-                let date = lastDate.setDate(lastDate.getDate() + i);
-                console.log("date - " + date)
+                let newDate = new Date(lastDate);
+                newDate.setDate(lastDate.getDate() + i);
+                console.log("date - " + newDate)
                 // Проверяем, является ли день рабочим
-                let isWorkingDay = await this._isWorkingDay(date);
+                let isWorkingDay = await this._isWorkingDay(newDate);
                 console.log("isWorkingDay - " + isWorkingDay)
                 if (isWorkingDay) {
-                    console.log('Зеленая серия прерывалась в дату: ' + new Date(date))
+                    console.log('Зеленая серия прерывалась в дату: ' + newDate)
                     // если зеленая серия прерывалась, то проставляем текущий greenstreak = 1
                     await this._updateGreenstreak(Number(1))
                     break;
