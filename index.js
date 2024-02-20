@@ -176,7 +176,7 @@ app.command('/greenstreak', async ({command, ack, say}) => {
         if (!length || typeof length === "undefined") {
             await say('Не удалось получить значение green streak');
         } else {
-            await say(`Green streak ${length} days!`);
+            await say(`:herb: Зеленая серия автотестов длится ${length} дней :herb:`);
         }
     } catch (e) {
         console.error(e)
