@@ -165,10 +165,29 @@ app.view('flaky_callback', async ({ack, view, client},) => {
     }
 });
 
+app.command('/greenstreak', async ({command, ack, say}) => {
+    await ack();
+
+    try {
+        let length = await greenStreak._getGreenStreakLength();
+        console.log("green streak length - " + length)
+
+        console.log(length)
+        if (!length || typeof length === "undefined") {
+            await say('Не удалось получить значение green streak');
+        } else {
+            await say(`Green streak ${length} days!`);
+        }
+    } catch (e) {
+        console.error(e)
+    }
+
+});
+
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡️');
     await googleDocService.start();
-    await cron.scheduleJob('00 06 * * 1-5', function() {
+    await cron.scheduleJob('00 06 * * 1-5', function () {
         {
             console.log('sendMsgToSiteQaAutomation Cron started');
             googleDocService.start();
