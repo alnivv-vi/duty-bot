@@ -190,7 +190,6 @@ app.command('/greenstreak', async ({command, ack, say}) => {
     await cron.scheduleJob('00 06 * * 1-5', function () {
         {
             console.log('sendMsgToSiteQaAutomation Cron started');
-            googleDocService.start();
             const dutySlackId = googleDocService.getActualDutyId();
             if (dutySlackId === '') {
                 slackService.sendMsgToSiteQaAutomation('Не удалось получить значение из таблицы с графиком дежурств');
