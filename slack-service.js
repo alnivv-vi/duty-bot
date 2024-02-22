@@ -114,7 +114,7 @@ class SlackService {
 
     async _filterByGroup(messages) {
         try {
-            if (messages[0].match(/-acceptance.*/)) return messages.filter(value => /-acceptance.*/.test(value));
+            if (messages[0].match(/-acceptance.*/) && !messages[0].match(/master--acceptance.*/)) return messages.filter(value => /-acceptance.*/.test(value));
             else if (messages[0].match(/-api.*/)) return messages.filter(value => /-api.*/.test(value));
             else if (messages[0].match(/-backend.*/)) return messages.filter(value => /-backend.*/.test(value));
             else (console.log('Тег не подходит под условия'));
@@ -133,7 +133,7 @@ class SlackService {
 
             for (let message of previousMessages) {
                 console.log(message);
-                if(message.match(/\d+-canary.*/) || message.match(/\d+--acceptance.*/)) {
+                if(message.match(/\d+-canary.*/) || message.match(/--acceptance.*/)) {
                     continue
                 }
                 let tagName = message.match(/\d+-master.*/)[0];
