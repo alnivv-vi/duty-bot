@@ -1,8 +1,8 @@
-const googleDocService = require('./google-doc');
+// const googleDocService = require('./google-doc');
 const slackService = require('./slack-service');
 const flakyService = require('./flaky');
 const greenStreak = require('./greenstreak');
-const cron = require('node-schedule');
+// const cron = require('node-schedule');
 const {App} = require('@slack/bolt');
 require('dotenv').config();
 
@@ -11,27 +11,27 @@ const app = new App({
     signingSecret: process.env.SLACK_SIGNING_SECRET
 });
 
-app.command('/duty', async ({command, ack, say}) => {
-    await ack();
-
-    try {
-        await googleDocService.start();
-        const dutySlackId = googleDocService.getActualDutyId();
-        if (dutySlackId === '') {
-            await say('Не удалось получить значение из таблицы с графиком дежурств. Обратитесь в #site-qa-automation');
-            return
-        }
-        if (typeof dutySlackId === "undefined") {
-            await say(`Не удалось определить дежурного. Повторите попытку или обратитесь в #site-qa-automation`);
-        } else {
-            await say(`Дежурит <@${dutySlackId}>`);
-        }
-
-    } catch (e) {
-        console.error(e)
-    }
-
-});
+// app.command('/duty', async ({command, ack, say}) => {
+//     await ack();
+//
+//     try {
+//         await googleDocService.start();
+//         const dutySlackId = googleDocService.getActualDutyId();
+//         if (dutySlackId === '') {
+//             await say('Не удалось получить значение из таблицы с графиком дежурств. Обратитесь в #site-qa-automation');
+//             return
+//         }
+//         if (typeof dutySlackId === "undefined") {
+//             await say(`Не удалось определить дежурного. Повторите попытку или обратитесь в #site-qa-automation`);
+//         } else {
+//             await say(`Дежурит <@${dutySlackId}>`);
+//         }
+//
+//     } catch (e) {
+//         console.error(e)
+//     }
+//
+// });
 
 app.message(/(\/failedRerunTests\.txt).*/, async ({context, message, say}) => {
     const reportProdChannelId = process.env.REPORT_PROD_CHANNEL_ID;
@@ -186,19 +186,19 @@ app.command('/greenstreak', async ({command, ack, say}) => {
 
 (async () => {
     console.log('⚡️duty-bot готов к работе ⚡️');
-    await googleDocService.start();
-    await cron.scheduleJob('00 06 * * 1-5', function () {
-        {
-            console.log('sendMsgToSiteQaAutomation Cron started');
-            const dutySlackId = googleDocService.getActualDutyId();
-            if (dutySlackId === '') {
-                slackService.sendMsgToSiteQaAutomation('Не удалось получить значение из таблицы с графиком дежурств');
-            } else if (typeof dutySlackId === "undefined") {
-                slackService.sendMsgToSiteQaAutomation('Не удалось определить дежурного');
-            } else {
-                slackService.sendMsgToSiteQaAutomation(`Дежурит <@${dutySlackId}>`)
-            }
-        }
-    });
+    // await googleDocService.start();
+    // await cron.scheduleJob('00 06 * * 1-5', function () {
+    //     {
+    //         console.log('sendMsgToSiteQaAutomation Cron started');
+    //         const dutySlackId = googleDocService.getActualDutyId();
+    //         if (dutySlackId === '') {
+    //             slackService.sendMsgToSiteQaAutomation('Не удалось получить значение из таблицы с графиком дежурств');
+    //         } else if (typeof dutySlackId === "undefined") {
+    //             slackService.sendMsgToSiteQaAutomation('Не удалось определить дежурного');
+    //         } else {
+    //             slackService.sendMsgToSiteQaAutomation(`Дежурит <@${dutySlackId}>`)
+    //         }
+    //     }
+    // });
     await app.start(process.env.PORT || 3000);
 })();

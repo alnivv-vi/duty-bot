@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | убрал дубль googleDocService.start()">
+    <list default="true" id="bbdb2f71-b847-4a0f-a321-1df65c68b7c0" name="Changes" comment="* | fix for master--acceptance tag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slack-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/slack-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google-doc.js" beforeDir="false" afterPath="$PROJECT_DIR$/google-doc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,26 +60,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.index.js.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "javascript.nodejs.core.library.configured.version": "20.11.1",
-    "javascript.nodejs.core.library.typings.version": "20.11.1",
-    "last_opened_file_path": "/home/alnivv/PhpstormProjects/duty-bot",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alnivv/PhpstormProjects/duty-bot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -218,7 +219,13 @@
       <workItem from="1708519901252" duration="13618000" />
       <workItem from="1708534198549" duration="241000" />
       <workItem from="1708534450326" duration="2897000" />
-      <workItem from="1708581699625" duration="5998000" />
+      <workItem from="1708581699625" duration="6641000" />
+      <workItem from="1708929100931" duration="1797000" />
+      <workItem from="1712910437470" duration="1958000" />
+      <workItem from="1713167635546" duration="25000" />
+      <workItem from="1713248795292" duration="33000" />
+      <workItem from="1713335199877" duration="1161000" />
+      <workItem from="1716533186235" duration="829000" />
     </task>
     <task id="LOCAL-00001" summary="* | env config added">
       <created>1654500925446</created>
@@ -507,14 +514,6 @@
       <option name="project" value="LOCAL" />
       <updated>1693377361375</updated>
     </task>
-    <task id="LOCAL-00065" summary="* | cron debug">
-      <option name="closed" value="true" />
-      <created>1708094002430</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1708094002430</updated>
-    </task>
     <task id="LOCAL-00066" summary="* | node-schedule">
       <option name="closed" value="true" />
       <created>1708094823439</created>
@@ -571,7 +570,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708506648515</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="* | fix for master--acceptance tag">
+      <option name="closed" value="true" />
+      <created>1708615027491</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1708615027492</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +596,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* | vercel added" />
     <MESSAGE value="* |node version upd" />
     <MESSAGE value="* | node-cron added" />
     <MESSAGE value="* | добавил отправку запроса каждый раз при вызове команды duty" />
@@ -614,6 +620,7 @@
     <MESSAGE value="* | slash-command /greenstreak added" />
     <MESSAGE value="* | slash-command /greenstreak text fixed" />
     <MESSAGE value="* | убрал дубль googleDocService.start()" />
-    <option name="LAST_COMMIT_MESSAGE" value="* | убрал дубль googleDocService.start()" />
+    <MESSAGE value="* | fix for master--acceptance tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="* | fix for master--acceptance tag" />
   </component>
 </project>
